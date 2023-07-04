@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        function_Dev = 'java-lambda-test_Dev'
-        function_Test = 'java-lambda-test_Test'
-        function_Prod = 'java-lambda-test_Prod'
+        function_Dev = 'java-lambda-test-Dev'
+        function_Test = 'java-lambda-test-Test'
+        function_Prod = 'java-lambda-test-Prod'
 
     }
 
