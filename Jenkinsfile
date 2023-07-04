@@ -45,7 +45,7 @@ pipeline {
         stage('Push') {
             steps {
                 echo 'Push'
-                sh "aws s3 cp target/sample-1.0.3.jar s3://jenkinsbucket12345"
+                sh "aws s3 cp target/sample-1.0.3.jar s3://dollyyjenkinshaha123"
             }
         }
 
@@ -59,14 +59,14 @@ pipeline {
                 stage('Deploy to Dev') {
                     steps {
                         echo 'Build'
-                        sh "aws lambda update-function-code --function-name $function_Dev --region us-east-1 --s3-bucket jenkinsbucket12345 --s3-key sample-1.0.3.jar"
+                        sh "aws lambda update-function-code --function-name $function_Dev --region us-east-1 --s3-bucket dollyyjenkinshaha123 --s3-key sample-1.0.3.jar"
                     }
                 }
 
                 stage('Deploy to test ') {
                     steps {
                         echo 'Build'
-                        sh "aws lambda update-function-code --function-name $function_Test --region us-east-1 --s3-bucket jenkinsbucket12345 --s3-key sample-1.0.3.jar"
+                        sh "aws lambda update-function-code --function-name $function_Test --region us-east-1 --s3-bucket dollyyjenkinshaha123 --s3-key sample-1.0.3.jar"
                     }
                 }
             }
@@ -88,7 +88,7 @@ pipeline {
                 branch 'main'
             }
             steps {
-                sh "aws lambda update-function-code --function-name $function_Prod --region us-east-1 --s3-bucket jenkinsbucket12345 --s3-key sample-1.0.3.jar"
+                sh "aws lambda update-function-code --function-name $function_Prod --region us-east-1 --s3-bucket dollyyjenkinshaha123 --s3-key sample-1.0.3.jar"
             }
         }
         // CD Ended
